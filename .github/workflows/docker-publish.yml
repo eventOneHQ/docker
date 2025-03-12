@@ -76,7 +76,7 @@ jobs:
         with:
           context: android/33-node
           push: ${{ github.event_name != 'pull_request' }}
-          tags: 33-node
+          tags: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:33-node
           labels: ${{ steps.meta.outputs.labels }}
           cache-from: type=gha
           cache-to: type=gha,mode=max
@@ -86,7 +86,7 @@ jobs:
         with:
           context: android/34-node
           push: ${{ github.event_name != 'pull_request' }}
-          tags: 34-node
+          tags: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:34-node
           labels: ${{ steps.meta.outputs.labels }}
           cache-from: type=gha
           cache-to: type=gha,mode=max
@@ -96,7 +96,7 @@ jobs:
         with:
           context: android/35-node
           push: ${{ github.event_name != 'pull_request' }}
-          tags: 35-node
+          tags: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:35-node
           labels: ${{ steps.meta.outputs.labels }}
           cache-from: type=gha
           cache-to: type=gha,mode=max
