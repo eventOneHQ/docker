@@ -104,12 +104,12 @@ RUN apt-get update \
     && tar -xzvf ruby-install-0.8.5.tar.gz \
     && cd ruby-install-0.8.5 \
     && make install \
-    && ruby-install --cleanup ruby 2.7.6 \
+    && ruby-install --cleanup ruby 3.2.2 \
     && rm -r /tmp/ruby-install-* \
     && rm -rf /var/lib/apt/lists/*
 
 # Configure Ruby
-ENV PATH /opt/rubies/ruby-2.7.6/bin:${PATH}
+ENV PATH /opt/rubies/ruby-3.2.2/bin:${PATH}
 RUN echo 'gem: --env-shebang --no-rdoc --no-ri' >> ~/.gemrc && gem install bundler fastlane
 
 # Download Android SDK
