@@ -28,7 +28,7 @@ RUN apt-get install -y \
     gzip \
     parallel \
     net-tools \
-    netcat \
+    netcat-traditional \
     unzip \
     zip \
     bzip2 \
